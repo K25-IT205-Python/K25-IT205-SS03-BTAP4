@@ -1,9 +1,15 @@
-# Nguyên nhân : 
-#     - Không kiểm tra điều kiện hợp lệ cho số lượng nhân sự mới nên có thể nhập số âm hoặc 0 dẫn đến dữ liệu không thực tế
-#     - Không dùng vòng lặp để ép nhập lại khi dữ liệu không hợp lệ nên
-#       chương trình vẫn tiếp tục chạy với dữ liệu lỗi mà không có cơ hội sửa lại
-#     - Logic không rõ ràng thiếu structure if-else nên người đọc không biết ý
-# Giải pháp: Dùng vòng lặp while để ép nhập lại cho đến khi hợp lệ, dùng if-else để kiểm tra điều kiện và in thông báo lỗi hoặc thành công tương ứng.      
+# Đầu vào (Input): HR nhập số lượng nhân sự mới (chuỗi từ bàn phím, cần chuyển sang số nguyên).
+# Đầu ra (Output):
+# -Nếu số nhập vào ≤ 0 → In lỗi: [LỖI] Số lượng không hợp lệ! Vui lòng nhập một con số lớn hơn 0. và bắt nhập lại.
+# -Nếu số nhập vào > 0 → In thông báo thành công: [THÀNH CÔNG] Đã ghi nhận yêu cầu cấp phát tài sản cho X nhân sự mới!.
+
+# Giải pháp 1: While True (vòng lặp vô hạn + break)
+# Giải pháp 2: Vòng lặp điều kiện (while n <= 0)
+
+# So sánh Ưhile True và While n <= 0:
+# - While True: Vòng lặp vô hạn, cần dùng break để thoát khi điều kiện hợp lệ. Ưu điểm: Linh hoạt, dễ đọc. Nhược điểm: Cần nhớ thêm break.
+# - While n <= 0: Vòng lặp có điều kiện, tự động dừng khi điều kiện không còn đúng. Ưu điểm: Tự động dừng, logic rõ ràng. Nhược điểm: Cần đảm bảo điều kiện được cập nhật đúng.
+
 
 print("--- HỆ THỐNG KHAI BÁO NHÂN SỰ MỚI ---")
 
